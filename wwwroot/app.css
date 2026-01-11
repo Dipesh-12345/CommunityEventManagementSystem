@@ -1,0 +1,299 @@
+﻿/* GLOBAL STYLES */
+html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* Home*/
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( rgba(26, 115, 232, 0.7), rgba(255, 102, 0, 0.65) ), url("/images/hero-bg.jpg"); 
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.hero-title {
+    letter-spacing: 1px;
+    animation: slideFade 1.2s ease forwards;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-lead {
+    animation: fadeIn 1.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-lead {
+        font-size: 1.1rem;
+    }
+}
+/* SIDEBAR CONTAINER */
+.vh-100.position-sticky {
+    background: linear-gradient(180deg, #0f172a, #1e293b);
+    color: #ffffff;
+    box-shadow: 4px 0 25px rgba(0,0,0,0.25);
+}
+
+/* LOGO AREA */
+.vh-100 img {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+
+/* NAV LINKS */
+.nav-pills .nav-link {
+    color: #cbd5e1;
+    border-radius: 12px;
+    padding: 0.65rem 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+    /* Hover effect */
+    .nav-pills .nav-link:hover {
+        background: linear-gradient(135deg, #1a73e8, #2563eb);
+        color: #ffffff;
+        box-shadow: 0 6px 20px rgba(26,115,232,0.4);
+        transform: translateX(4px);
+    }
+
+    /* Active link */
+    .nav-pills .nav-link.active {
+        background: linear-gradient(135deg, #ff6600, #f97316);
+        color: #ffffff;
+        box-shadow: 0 8px 25px rgba(255,102,0,0.5);
+    }
+
+.vh-100 hr {
+    border-color: rgba(255,255,255,0.15);
+}
+
+/* =========================
+   BUTTONS (ADMIN / LOGOUT)
+========================= */
+.vh-100 .btn-success {
+    background: linear-gradient(135deg, #1a73e8, #ff6600);
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+    .vh-100 .btn-success:hover {
+        background: linear-gradient(135deg, #ff6600, #f97316);
+        box-shadow: 0 10px 25px rgba(255,102,0,0.5);
+        transform: translateY(-2px);
+    }
+
+
+.mt-auto {
+    padding-top: 1rem;
+}
+
+/* LOGIN PAGE BORDER*/
+.login-border {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border: 8px solid #4A90E2; 
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* LOGIN CSS */
+.login-scene {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: url("background.jpg") no-repeat center center ;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* LOGIN CARD */
+.login-card {
+    position: relative;
+    z-index: 10;
+    width: 400px;
+    max-width: 95vw;
+    padding: 2rem 2rem;
+    border-radius: 14px;
+    background: rgba(156, 143, 143, 0.8); 
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* AVATAR*/
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .avatar:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+/* INPUT FIELDS */
+.login-input {
+    width: 100%;
+    height: 48px;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+    .login-input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .login-input:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(74, 144, 226, 0.5);
+        box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.2);
+        color: #ffffff;
+    }
+
+.input-group-text {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+}
+
+    .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(74, 144, 226, 0.6);
+        background: linear-gradient(135deg, #357ABD 0%, #2A69A7 100%);
+    }
+
+/* LINKS */
+.forgot-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+    .forgot-link:hover {
+        color: #4A90E2;
+    }
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .login-card {
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+}
+/*Admin Dashboard */
+.admin-dashboard {
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.admin-card {
+    background: #B3B3B3;
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.45s ease;
+}
+/* Hover effect */
+    .admin-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0, 150, 136, 0.25);
+    }
+/* Buttons inside cards */
+.admin-btn {
+    margin-top: 18px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: #4D4545;
+    border: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+    .admin-btn:hover {
+        background: #36586B;
+        box-shadow: 0 10px 25px rgba(0, 150, 136, 0.4);
+        transform: translateY(-2px);
+    }
+
